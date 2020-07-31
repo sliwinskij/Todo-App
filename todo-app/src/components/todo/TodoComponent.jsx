@@ -19,7 +19,12 @@ class TodoComponent extends Component {
     }
 
     onSubmit(values) {
-
+        let username = AuthenticationService.getLoggedInUsername()
+        TodoDataService.updateTodo(username, this.state.id, {
+            id: this.state.id,
+            description: values.description,
+            targetDate: values.targetDate
+        }).then( () => this.props.history.push('/todos'))
     }
 
     componentDidMount() {
