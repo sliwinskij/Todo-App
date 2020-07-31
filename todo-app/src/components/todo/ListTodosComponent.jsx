@@ -14,6 +14,7 @@ class ListTodosComponent extends Component {
         this.deleteTodoClicked = this.deleteTodoClicked.bind(this)
         this.updateTodoClicked = this.updateTodoClicked.bind(this)
         this.refreshTodos = this.refreshTodos.bind(this)
+        this.addTodoClicked = this.addTodoClicked.bind(this)
     }
 
     componentDidMount() {
@@ -33,14 +34,10 @@ class ListTodosComponent extends Component {
 
     updateTodoClicked(id) {
         this.props.history.push(`/todos/${id}`)
-        // let username = AuthenticationService.getLoggedInUsername();
-        // TodoDataService.deletetTodo(username, id)
-        //     .then(
-        //         response => {
-        //             this.setState({ message: `Delete of todo ${id} successful` })
-        //             this.refreshTodos()
-        //         }
-        //     )
+    }
+
+    addTodoClicked() {
+        this.props.history.push(`/todos/-1`)
     }
 
     refreshTodos() {
@@ -53,7 +50,10 @@ class ListTodosComponent extends Component {
     render() {
         return (
             <div>
-                <h1>Todo List</h1>
+                <div className="container">
+                    <h1>Todo List</h1>
+                    <button className="btn btn-success float-right" onClick={this.addTodoClicked}>Add</button>
+                </div>
                 {this.state.message && <div className="alert alert-success">{this.state.message}</div>}
                 <div className="container">
                     <table className="table">
