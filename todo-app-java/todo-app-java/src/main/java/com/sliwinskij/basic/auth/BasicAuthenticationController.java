@@ -1,4 +1,4 @@
-package com.sliwinskij.todoappjava.basic.auth;
+package com.sliwinskij.basic.auth;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

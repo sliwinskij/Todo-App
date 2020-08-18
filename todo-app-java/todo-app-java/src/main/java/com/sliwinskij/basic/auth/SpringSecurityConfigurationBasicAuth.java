@@ -1,4 +1,4 @@
-package com.sliwinskij.todoappjava.basic.auth;
+package com.sliwinskij.basic.auth;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;

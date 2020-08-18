@@ -1,4 +1,4 @@
-package com.sliwinskij.todoappjava.basic.auth;
+package com.sliwinskij.basic.auth;
 
 public class AuthenticationBean {
     public String message;
